@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingListApp.Views.AddCategoryPage"
+             BackgroundColor="#1E1E1E">
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Nazwa nowej kategorii" 
+               TextColor="#E0E0E0" 
+               FontSize="22" 
+               FontAttributes="Bold" />
+
+        <Frame BackgroundColor="#2A2A2A" Padding="5" HasShadow="False">
+            <Entry x:Name="CategoryNameEntry" 
+                   Placeholder="Wpisz nazwę kategorii" 
+                   BackgroundColor="Transparent" 
+                   TextColor="#FFFFFF" 
+                   PlaceholderColor="#AAAAAA" 
+                   HeightRequest="50" />
+        </Frame>
+
+        <Button Text="Dodaj kategorię" 
+                Clicked="AddCategoryButton_Clicked" 
+                BackgroundColor="#3B82F6" 
+                TextColor="#FFFFFF" 
+                HeightRequest="50" />
+    </StackLayout>
+</ContentPage>

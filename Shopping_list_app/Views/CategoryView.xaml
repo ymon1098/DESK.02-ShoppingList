@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:ShoppingListApp.Views"
+             x:Class="ShoppingListApp.Views.CategoryView">
+    <Frame Padding="15" Margin="10" CornerRadius="10" HasShadow="True" BorderColor="#5A5A5A" BackgroundColor="#2A2A2A">
+        <StackLayout Spacing="10">
+            <Label Text="{Binding Name}" 
+                   FontSize="20" 
+                   FontAttributes="Bold" 
+                   TextColor="#FFFFFF" />
+
+            <Button Text="Rozwiń" 
+                    Clicked="ToggleExpand" 
+                    BackgroundColor="#3B82F6" 
+                    TextColor="#FFFFFF" 
+                    CornerRadius="10" 
+                    HeightRequest="40" />
+
+            <CollectionView ItemsSource="{Binding Products}" 
+                            IsVisible="{Binding IsExpanded}" 
+                            BackgroundColor="#1E1E1E"
+                            Margin="0,10,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <views:ProductView />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </Frame>
+</ContentView>

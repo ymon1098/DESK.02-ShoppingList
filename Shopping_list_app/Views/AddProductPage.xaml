@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingListApp.Views.AddProductPage"
+             BackgroundColor="#1E1E1E">
+    <StackLayout Padding="20" Spacing="15">
+        <!-- Product Picker -->
+        <Frame BackgroundColor="#2A2A2A" Padding="5" HasShadow="False">
+            <Picker x:Name="ProductPicker" 
+                    Title="Wybierz produkt" 
+                    BackgroundColor="Transparent" 
+                    TitleColor="#AAAAAA" 
+                    FontSize="18" 
+                    TextColor="#FFFFFF" />
+        </Frame>
+
+        <!-- New Product Label -->
+        <Label Text="Lub dodaj nowy produkt" 
+               FontSize="20" 
+               TextColor="#E0E0E0" />
+
+        <!-- New Product Entry -->
+        <Frame BackgroundColor="#2A2A2A" Padding="5" HasShadow="False">
+            <Entry x:Name="NewProductNameEntry" 
+                   Placeholder="Wpisz nazwę nowego produktu" 
+                   BackgroundColor="Transparent" 
+                   PlaceholderColor="#AAAAAA" 
+                   TextColor="#FFFFFF" 
+                   HeightRequest="50" />
+        </Frame>
+
+        <!-- Quantity Label -->
+        <Label Text="Ilość" 
+               FontSize="20" 
+               TextColor="#E0E0E0" />
+
+        <!-- Quantity Entry -->
+        <Frame BackgroundColor="#2A2A2A" Padding="5" HasShadow="False">
+            <Entry x:Name="ProductQuantityEntry" 
+                   Placeholder="Wpisz ilość" 
+                   Keyboard="Numeric" 
+                   BackgroundColor="Transparent" 
+                   PlaceholderColor="#AAAAAA" 
+                   TextColor="#FFFFFF" 
+                   HeightRequest="50" />
+        </Frame>
+
+        <!-- Product Unit Picker -->
+        <Frame BackgroundColor="#2A2A2A" Padding="5" HasShadow="False">
+            <Picker x:Name="ProductUnitPicker" 
+                    Title="Wybierz jednostkę" 
+                    BackgroundColor="Transparent" 
+                    TitleColor="#AAAAAA" 
+                    FontSize="18" 
+                    TextColor="#FFFFFF" />
+        </Frame>
+
+        <!-- Category Picker -->
+        <Frame BackgroundColor="#2A2A2A" Padding="5" HasShadow="False">
+            <Picker x:Name="CategoryPicker" 
+                    Title="Wybierz kategorię" 
+                    BackgroundColor="Transparent" 
+                    TitleColor="#AAAAAA" 
+                    FontSize="18" 
+                    TextColor="#FFFFFF" />
+        </Frame>
+
+        <!-- Add Product Button -->
+        <Button Text="Dodaj produkt" 
+                Clicked="AddProductButton_Clicked" 
+                BackgroundColor="#3B82F6" 
+                TextColor="#FFFFFF" 
+                HeightRequest="50" />
+    </StackLayout>
+</ContentPage>
